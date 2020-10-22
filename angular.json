@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "oblog-admin"
+    }
+  },
+  "defaultProject": "oblog-admin",
+  "cli": {
+    "analytics": "7bfa77d1-c330-4ec2-bc46-1af70bb21902"
+  }
 }
