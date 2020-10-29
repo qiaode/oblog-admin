@@ -17,6 +17,7 @@ import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { NzBreadCrumbModule} from 'ng-zorro-antd/breadcrumb';
+import { BolgEditorComponent } from './pages/components/bolg-editor/bolg-editor.component';
 
 registerLocaleData(en);
 
@@ -24,7 +25,8 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     HeaderComponent,
-    FootComponent
+    FootComponent,
+    BolgEditorComponent
   ],
   imports: [
     BrowserModule,
