@@ -8,6 +8,7 @@ import {NzLayoutModule} from 'ng-zorro-antd/layout';
 import {NzDropDownModule} from 'ng-zorro-antd/dropdown';
 import {NzMenuModule} from 'ng-zorro-antd/menu';
 import {NzIconModule} from 'ng-zorro-antd/icon';
+import {BlogEditorModule} from '../components/bolg-editor/blog-editor.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {NzIconModule} from 'ng-zorro-antd/icon';
     NzLayoutModule,
     NzDropDownModule,
     NzMenuModule,
-    NzIconModule
+    NzIconModule,
+    BlogEditorModule
   ],
   exports: [OblogComponent]
 })
