@@ -10,10 +10,13 @@ import {NzMenuModule} from 'ng-zorro-antd/menu';
 import {NzIconModule} from 'ng-zorro-antd/icon';
 import {BlogEditorModule} from '../components/bolg-editor/blog-editor.module';
 import {NzButtonModule} from 'ng-zorro-antd/button';
+import { BolgContentComponent } from './bolg-content/bolg-content.component';
+import { ArticleComponent } from './article/article.component';
+import { BolgSortComponent } from './bolg-sort/bolg-sort.component';
 
 
 @NgModule({
-  declarations: [OblogComponent],
+  declarations: [OblogComponent, BolgContentComponent, ArticleComponent, BolgSortComponent],
   imports: [
     CommonModule,
     OblogRoutingModule,
