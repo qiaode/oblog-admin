@@ -17,7 +17,6 @@ import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { NzBreadCrumbModule} from 'ng-zorro-antd/breadcrumb';
-import { BlogEditorModule } from './pages/components/bolg-editor/blog-editor.module';
 
 registerLocaleData(en);
 
@@ -37,8 +36,7 @@ registerLocaleData(en);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NzBreadCrumbModule,
-    BlogEditorModule
+    NzBreadCrumbModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

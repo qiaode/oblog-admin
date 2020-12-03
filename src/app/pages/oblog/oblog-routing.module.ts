@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {OblogComponent} from './oblog.component';
+import {BolgEditorComponent} from './bolg-editor/bolg-editor.component';
 
 const routes: Routes = [
-  { path: '', component: OblogComponent}
+  { path: '', component: OblogComponent},
+  { path: 'editor', component: BolgEditorComponent}
 ];
 
 @NgModule({
