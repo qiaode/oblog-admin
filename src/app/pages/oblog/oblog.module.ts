@@ -14,6 +14,8 @@ import { ArticleComponent } from './article/article.component';
 import { BolgSortComponent } from './bolg-sort/bolg-sort.component';
 import {BolgEditorComponent} from './bolg-editor/bolg-editor.component';
 import {QuillModule} from 'ngx-quill';
+import {FormsModule} from '@angular/forms';
+import {NzFormModule} from 'ng-zorro-antd/form';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import {QuillModule} from 'ngx-quill';
     NzIconModule,
     NzButtonModule,
     NzButtonModule,
-    QuillModule.forRoot()
+    QuillModule.forRoot(),
+    FormsModule,
+    NzFormModule
   ],
   exports: [OblogComponent]
 })

@@ -1,2 +1,6 @@
-<button nz-button nzType="default" (click)="submitBlob()">发布文章</button>
+<div nz-row>
+  <div nz-col nzSpan="6" class="inner-box"><i nz-icon nzType="left" nzTheme="outline"></i> <button nz-button nzType="text"><a routerLink="/oblog" routerLinkActive="active">文章管理</a></button></div>
+  <div nz-col nzSpan="6" class="inner-box">col-12</div>
+  <div nz-col nzSpan="6" class="inner-box">col-12</div>
+</div>
 <quill-editor [(ngModel)]="blogContent"></quill-editor>

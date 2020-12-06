@@ -5,7 +5,7 @@ import {BolgEditorComponent} from './bolg-editor/bolg-editor.component';
 
 const routes: Routes = [
   { path: '', component: OblogComponent},
-  { path: 'editor', component: BolgEditorComponent}
+  { path: 'oblog/editor', component: BolgEditorComponent}
 ];
 
 @NgModule({
