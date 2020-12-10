@@ -21,24 +21,27 @@ import { NzBreadCrumbModule} from 'ng-zorro-antd/breadcrumb';
 registerLocaleData(en);
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FootComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    OblogModule,
-    IconsProviderModule,
-    NzLayoutModule,
-    NzMenuModule,
-    FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    NzBreadCrumbModule
-  ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        FootComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        OblogModule,
+        IconsProviderModule,
+        NzLayoutModule,
+        NzMenuModule,
+        FormsModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        NzBreadCrumbModule
+    ],
+    providers: [{provide: NZ_I18N, useValue: en_US}],
+    exports: [
+        HeaderComponent
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

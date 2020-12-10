@@ -3,7 +3,11 @@ import {Routes, RouterModule} from '@angular/router';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: '/oblog'},
-  {path: 'oblog', loadChildren: () => import('./pages/oblog/oblog.module').then(m => m.OblogModule)}
+  {
+    path: 'oblog',
+    loadChildren: () => import('./pages/oblog/oblog.module').then(m => m.OblogModule),
+    data: { preload: true }
+  }
 ];
 
 @NgModule({

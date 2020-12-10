@@ -1,12 +1,14 @@
 <nz-layout>
   <nz-sider nzWidth="200px" nzTheme="light">
-    <ul class="blogButton">
-      <button nz-button nzType="default"> <a routerLink="/oblog/editor" routerLinkActive="active">编辑文章</a></button>
-    </ul>
+    <nav>
+      <ul class="blogButton">
+        <button nz-button nzType="default"> <a routerLink="/oblog/editor" routerLinkActive="active">编辑文章</a></button>
+      </ul>
+    </nav>
     <ul nz-menu nzMode="inline" class="sider-menu">
       <li nz-submenu nzOpen nzIcon="user" nzTitle="博客管理">
         <ul>
-          <li nz-menu-item nzSelected>文章管理</li>
+          <li nz-menu-item nzSelected><a routerLink="/oblog/manage" routerLinkActive="active">文章管理</a></li>
           <li nz-menu-item>分类管理</li>
           <li nz-menu-item>分类管理</li>
           <li nz-menu-item>option4</li>

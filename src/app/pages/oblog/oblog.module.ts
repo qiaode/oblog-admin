@@ -16,6 +16,7 @@ import {BolgEditorComponent} from './bolg-editor/bolg-editor.component';
 import {QuillModule} from 'ngx-quill';
 import {FormsModule} from '@angular/forms';
 import {NzFormModule} from 'ng-zorro-antd/form';
+import {AppModule} from '../../app.module';
 
 
 @NgModule({
@@ -34,6 +35,6 @@ import {NzFormModule} from 'ng-zorro-antd/form';
     FormsModule,
     NzFormModule
   ],
-  exports: [OblogComponent]
+  exports: []
 })
 export class OblogModule { }
