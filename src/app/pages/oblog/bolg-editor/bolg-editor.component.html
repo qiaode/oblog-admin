@@ -1,6 +1,12 @@
-<div nz-row>
-  <div nz-col nzSpan="6" class="inner-box"><i nz-icon nzType="left" nzTheme="outline"></i><button nz-button nzType="text"><a routerLink="/oblog" routerLinkActive="active">文章管理</a></button></div>
-  <div nz-col nzSpan="6" class="inner-box">col-12</div>
-  <div nz-col nzSpan="6" class="inner-box">col-12</div>
+<div class="content">
+  <div nz-row class="edit-header">
+    <div nz-col nzFlex="2">
+      <div class="inner-box">
+        <i nz-icon nzType="left" nzTheme="outline"></i><a routerLink="/oblog/manage" routerLinkActive="active">文章管理</a>
+      </div>
+    </div>
+    <div nz-col nzFlex="3" class="inner-box">3 / 5</div>
+  </div>
+  <quill-editor [(ngModel)]="blogContent"></quill-editor>
 </div>
-<quill-editor [(ngModel)]="blogContent"></quill-editor>
+
