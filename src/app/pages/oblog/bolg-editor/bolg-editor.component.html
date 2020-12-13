@@ -2,10 +2,18 @@
   <div nz-row class="edit-header">
     <div nz-col nzFlex="2">
       <div class="inner-box">
-        <i nz-icon nzType="left" nzTheme="outline"></i><a routerLink="/oblog/manage" routerLinkActive="active">文章管理</a>
+        <a routerLink="/oblog/manage" routerLinkActive="active"><i nz-icon nzType="left" nzTheme="outline"></i>文章管理</a>
       </div>
     </div>
-    <div nz-col nzFlex="3" class="inner-box">3 / 5</div>
+    <div nz-col nzFlex="2" class="inner-box">
+      <nz-input-group  class="title" [nzSuffix]="characterCount">
+        <input type="text" nz-input [(ngModel)]="blogTitle" (ngModelChange)="blogTitleChange()" maxlength="100" placeholder="文章标题"/>
+      </nz-input-group>
+    </div>
+    <div nz-col nzFlex="2" class="inner-box">
+      <label nz-radio-button nzValue="default">保存草稿</label>
+      <label nz-radio-button nzValue="default">发布文章</label>
+    </div>
   </div>
   <quill-editor [(ngModel)]="blogContent"></quill-editor>
 </div>

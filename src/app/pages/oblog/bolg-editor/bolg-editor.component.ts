@@ -13,8 +13,15 @@ export class BolgEditorComponent implements OnInit {
 
   blogContent = '请输入内容';
 
+  characterCount = '1/100';
+  blogTitle?: string;
+
   submitBlob() {
     this.blogService.addBlog(this.blogContent).subscribe();
+  }
+
+  blogTitleChange() {
+    this.characterCount = this.blogTitle.length + '/100';
   }
 
   ngOnInit(): void {

@@ -17,6 +17,8 @@ import {QuillModule} from 'ngx-quill';
 import {FormsModule} from '@angular/forms';
 import {NzFormModule} from 'ng-zorro-antd/form';
 import {AppModule} from '../../app.module';
+import {NzInputModule} from 'ng-zorro-antd/input';
+import {NzRadioModule} from 'ng-zorro-antd/radio';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import {AppModule} from '../../app.module';
     NzButtonModule,
     QuillModule.forRoot(),
     FormsModule,
-    NzFormModule
+    NzFormModule,
+    NzInputModule,
+    NzRadioModule
   ],
   exports: []
 })
