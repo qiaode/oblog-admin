@@ -11,10 +11,29 @@
       </nz-input-group>
     </div>
     <div nz-col nzFlex="2" class="inner-box">
-      <label nz-radio-button nzValue="default">保存草稿</label>
-      <label nz-radio-button nzValue="default">发布文章</label>
+      <button nz-button nzType="default">保存草稿</button>
+      <button nz-button nzType="default" (click)="open()">发布文章</button>
     </div>
   </div>
   <quill-editor [(ngModel)]="blogContent"></quill-editor>
 </div>
+
+<nz-drawer
+  [nzBodyStyle]="{ overflow: 'auto' }"
+  [nzMaskClosable]="false"
+  [nzWidth]="720"
+  [nzVisible]="visible"
+  nzTitle="Create"
+  [nzFooter]="footerTpl"
+  (nzOnClose)="close()"
+>
+  <span>sasadad</span>
+
+  <ng-template #footerTpl>
+    <div style="float: right">
+      <button nz-button style="margin-right: 8px;" (click)="close()">Cancel</button>
+      <button nz-button nzType="primary" (click)="close()">Submit</button>
+    </div>
+  </ng-template>
+</nz-drawer>
 

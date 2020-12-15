@@ -15,6 +15,7 @@ export class BolgEditorComponent implements OnInit {
 
   characterCount = '1/100';
   blogTitle?: string;
+  visible = false;
 
   submitBlob() {
     this.blogService.addBlog(this.blogContent).subscribe();
@@ -25,6 +26,14 @@ export class BolgEditorComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  open(): void {
+    this.visible = true;
+  }
+
+  close(): void {
+    this.visible = false;
   }
 
 

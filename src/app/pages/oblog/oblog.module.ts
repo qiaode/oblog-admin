@@ -19,6 +19,9 @@ import {NzFormModule} from 'ng-zorro-antd/form';
 import {AppModule} from '../../app.module';
 import {NzInputModule} from 'ng-zorro-antd/input';
 import {NzRadioModule} from 'ng-zorro-antd/radio';
+import {NzDrawerModule} from 'ng-zorro-antd/drawer';
+import {NzSelectModule} from 'ng-zorro-antd/select';
+import {NzDatePickerModule} from 'ng-zorro-antd/date-picker';
 
 
 @NgModule({
@@ -37,7 +40,10 @@ import {NzRadioModule} from 'ng-zorro-antd/radio';
     FormsModule,
     NzFormModule,
     NzInputModule,
-    NzRadioModule
+    NzRadioModule,
+    NzDrawerModule,
+    NzSelectModule,
+    NzDatePickerModule
   ],
   exports: []
 })
