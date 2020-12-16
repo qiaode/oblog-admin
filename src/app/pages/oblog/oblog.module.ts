@@ -16,7 +16,6 @@ import {BolgEditorComponent} from './bolg-editor/bolg-editor.component';
 import {QuillModule} from 'ngx-quill';
 import {FormsModule} from '@angular/forms';
 import {NzFormModule} from 'ng-zorro-antd/form';
-import {AppModule} from '../../app.module';
 import {NzInputModule} from 'ng-zorro-antd/input';
 import {NzRadioModule} from 'ng-zorro-antd/radio';
 import {NzDrawerModule} from 'ng-zorro-antd/drawer';
@@ -37,8 +36,8 @@ import {NzDatePickerModule} from 'ng-zorro-antd/date-picker';
     NzButtonModule,
     NzButtonModule,
     QuillModule.forRoot(),
-    FormsModule,
     NzFormModule,
+    FormsModule,
     NzInputModule,
     NzRadioModule,
     NzDrawerModule,

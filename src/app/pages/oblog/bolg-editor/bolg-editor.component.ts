@@ -16,6 +16,8 @@ export class BolgEditorComponent implements OnInit {
   characterCount = '1/100';
   blogTitle?: string;
   visible = false;
+  inputValue: string | null = null;
+  showSortInput = false;
 
   submitBlob() {
     this.blogService.addBlog(this.blogContent).subscribe();
