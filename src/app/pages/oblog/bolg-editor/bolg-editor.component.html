@@ -36,13 +36,16 @@
           </div>
         </div>
         <div nz-col nzSpan="18">
-          <div>
-            <nz-input-group [nzSuffix]="inputClearTpl" *ngIf="showSortInput">
-              <input type="text" nz-input [(ngModel)]="inputValue" placeholder="input with clear icon" />
+          <div *ngFor="let item of sorts; let i=index">
+            <nz-input-group [nzSuffix]="inputClearTpl" *ngIf="item.inputType">
+              <input type="text" nz-input [(ngModel)]="item.sortName" placeholder="input with clear icon" />
             </nz-input-group>
             <ng-template #inputClearTpl>
-              <i nz-icon class="ant-input-clear-icon" nzTheme="fill" nzType="close-circle" (click)="inputValue = null"></i>
+              <i nz-icon class="ant-input-clear-icon" nzTheme="fill" nzType="close-circle" (click)="clearSortNameInput(item)"></i>
             </ng-template>
+          </div>
+          <div>
+            <button nz-button nzType="default" style="border-radius: 5px;" (click)="addBlogSort()"><i nz-icon nzType="plus" nzTheme="outline"></i>新建分类</button>
           </div>
         </div>
       </div>

@@ -16,8 +16,9 @@ export class BolgEditorComponent implements OnInit {
   characterCount = '1/100';
   blogTitle?: string;
   visible = false;
-  inputValue: string | null = null;
-  showSortInput = false;
+  sortName: string | null = null;
+  showSortInput = true;
+  sorts: TitleSort[] = [];
 
   submitBlob() {
     this.blogService.addBlog(this.blogContent).subscribe();
@@ -38,5 +39,25 @@ export class BolgEditorComponent implements OnInit {
     this.visible = false;
   }
 
+  addBlogSort(): void {
+    const titleSort = new TitleSort(this.sortName, true);
+    this.sorts.push(titleSort);
+    console.log(this.sorts);
+  }
 
+  clearSortNameInput(sort): void{
+    this.sorts.unshift(sort);
+  }
+
+
+}
+
+export class TitleSort {
+  constructor(sortName: string, inputType: boolean) {
+    this.sortName = sortName;
+    this.inputType = inputType;
+  }
+
+  sortName: string;
+  inputType: boolean;
 }
