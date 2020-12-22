@@ -46,7 +46,9 @@ export class BolgEditorComponent implements OnInit {
   }
 
   clearSortNameInput(sort): void{
-    this.sorts.unshift(sort);
+    const index = this.sorts.indexOf(sort);
+    this.sorts.splice(index, 1);
+    console.log(this.sorts);
   }
 
 
