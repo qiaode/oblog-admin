@@ -51,6 +51,10 @@ export class BolgEditorComponent implements OnInit {
     console.log(this.sorts);
   }
 
+  log(value: string[]): void {
+    console.log(value);
+  }
+
 
 }
 

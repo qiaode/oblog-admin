@@ -22,20 +22,20 @@
   <nz-drawer
     [nzBodyStyle]="{ overflow: 'auto' }"
     [nzMaskClosable]="false"
-    [nzWidth]="720"
+    [nzWidth]="600"
     [nzVisible]="visible"
     nzTitle="发布文章"
     [nzFooter]="footerTpl"
     (nzOnClose)="close()"
   >
     <div>
-      <div nz-row [nzGutter]="8">
-        <div nz-col nzSpan="6">
+      <div nz-row [nzGutter]="4" style="margin-bottom: 10px">
+        <div nz-col nzSpan="4">
           <div>
-            <span>文章分类</span>
+            <span>文章分类：</span>
           </div>
         </div>
-        <div nz-col nzSpan="18">
+        <div nz-col nzSpan="20">
           <div *ngFor="let item of sorts; let i=index">
             <nz-input-group [nzSuffix]="inputClearTpl" *ngIf="item.inputType">
               <input type="text" nz-input [(ngModel)]="item.sortName" placeholder="input with clear icon" />
@@ -49,15 +49,21 @@
           </div>
         </div>
       </div>
-      <div nz-row [nzGutter]="8">
-        <div nz-col nzSpan="6">
+      <div nz-row [nzGutter]="4">
+        <div nz-col nzSpan="4">
         </div>
-        <div nz-col nzSpan="18">
+        <div nz-col nzSpan="20">
           <div>
-            <nz-card style="width:300px;" [nzTitle]="extraTemplate">
-              <p>Card content</p>
-              <p>Card content</p>
-              <p>Card content</p>
+            <nz-card style="width: 80%;" [nzTitle]="extraTemplate">
+              <nz-checkbox-wrapper style="width: 100%;" (nzOnChange)="log($event)">
+                <div nz-row>
+                  <div nz-col nzSpan="8"><label nz-checkbox nzValue="A" [ngModel]="true">A</label></div>
+                  <div nz-col nzSpan="8"><label nz-checkbox nzValue="B">B</label></div>
+                  <div nz-col nzSpan="8"><label nz-checkbox nzValue="C">C</label></div>
+                  <div nz-col nzSpan="8"><label nz-checkbox nzValue="D">D</label></div>
+                  <div nz-col nzSpan="8"><label nz-checkbox nzValue="E">E</label></div>
+                </div>
+              </nz-checkbox-wrapper>
             </nz-card>
             <ng-template #extraTemplate>
               <span style="font-size: 14px">最多选择3个分类专栏</span>

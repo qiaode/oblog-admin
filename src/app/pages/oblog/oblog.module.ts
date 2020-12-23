@@ -22,30 +22,32 @@ import {NzDrawerModule} from 'ng-zorro-antd/drawer';
 import {NzSelectModule} from 'ng-zorro-antd/select';
 import {NzDatePickerModule} from 'ng-zorro-antd/date-picker';
 import {NzCardModule} from 'ng-zorro-antd/card';
+import {NzCheckboxModule} from 'ng-zorro-antd/checkbox';
 
 
 @NgModule({
   declarations: [OblogComponent, BolgContentComponent, ArticleComponent, BolgSortComponent, BolgEditorComponent],
-    imports: [
-        CommonModule,
-        OblogRoutingModule,
-        NzBreadCrumbModule,
-        NzLayoutModule,
-        NzDropDownModule,
-        NzMenuModule,
-        NzIconModule,
-        NzButtonModule,
-        NzButtonModule,
-        QuillModule.forRoot(),
-        NzFormModule,
-        FormsModule,
-        NzInputModule,
-        NzRadioModule,
-        NzDrawerModule,
-        NzSelectModule,
-        NzDatePickerModule,
-        NzCardModule
-    ],
+  imports: [
+    CommonModule,
+    OblogRoutingModule,
+    NzBreadCrumbModule,
+    NzLayoutModule,
+    NzDropDownModule,
+    NzMenuModule,
+    NzIconModule,
+    NzButtonModule,
+    NzButtonModule,
+    QuillModule.forRoot(),
+    NzFormModule,
+    FormsModule,
+    NzInputModule,
+    NzRadioModule,
+    NzDrawerModule,
+    NzSelectModule,
+    NzDatePickerModule,
+    NzCardModule,
+    NzCheckboxModule
+  ],
   exports: []
 })
 export class OblogModule { }
