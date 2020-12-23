@@ -50,21 +50,19 @@
         </div>
       </div>
       <div nz-row [nzGutter]="8">
-        <div nz-col nzSpan="12">
-          <nz-form-item>
-            <nz-form-label>Owner</nz-form-label>
-            <nz-form-control>
-              <nz-select nzPlaceHolder="Please select an owner"></nz-select>
-            </nz-form-control>
-          </nz-form-item>
+        <div nz-col nzSpan="6">
         </div>
-        <div nz-col nzSpan="12">
-          <nz-form-item>
-            <nz-form-label>Type</nz-form-label>
-            <nz-form-control>
-              <nz-select nzPlaceHolder="Please choose the type"></nz-select>
-            </nz-form-control>
-          </nz-form-item>
+        <div nz-col nzSpan="18">
+          <div>
+            <nz-card style="width:300px;" [nzTitle]="extraTemplate">
+              <p>Card content</p>
+              <p>Card content</p>
+              <p>Card content</p>
+            </nz-card>
+            <ng-template #extraTemplate>
+              <span style="font-size: 14px">最多选择3个分类专栏</span>
+            </ng-template>
+          </div>
         </div>
       </div>
       <div nz-row [nzGutter]="8">
