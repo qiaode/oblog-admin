@@ -40,30 +40,45 @@ export class BolgEditorComponent implements OnInit {
   }
 
   addBlogSort(): void {
-    const titleSort = new TitleSort(this.sortName, true);
+    const titleSort = new TitleSort(null, this.sortName, true);
     this.sorts.push(titleSort);
     console.log(this.sorts);
   }
 
-  clearSortNameInput(sort): void{
+  clearSortNameInput(sort): void {
     const index = this.sorts.indexOf(sort);
     this.sorts.splice(index, 1);
     console.log(this.sorts);
   }
 
-  log(value: string[]): void {
-    console.log(value);
+  selectBlogSort(ids: number[]): void {
+    ids.forEach(id => {
+      if (!this.checkTitleSort(id)) {
+        this.sorts.push(new TitleSort(id, 'aa', false));
+      }
+    });
+    console.log(this.sorts);
   }
 
+  checkTitleSort(id: number): boolean {
+    this.sorts.forEach(titleSort => {
+      if (id == titleSort.id) {
+        return true;
+      }
+    });
+    return false;
+  }
 
 }
 
 export class TitleSort {
-  constructor(sortName: string, inputType: boolean) {
+  constructor(id: number, sortName: string, isNew: boolean) {
     this.sortName = sortName;
-    this.inputType = inputType;
+    this.isNew = isNew;
+    this.id = id;
   }
 
   sortName: string;
-  inputType: boolean;
+  isNew: boolean;
+  id: number;
 }
