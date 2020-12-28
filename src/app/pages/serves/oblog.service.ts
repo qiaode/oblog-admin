@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {catchError, retry} from 'rxjs/operators';
-import { HttpErrorHandlerService, HandleError } from './http-error-handler.service';
+import {HttpErrorHandlerService, HandleError} from './http-error-handler.service';
 
 
 const httpOptions = {
@@ -19,6 +19,7 @@ export class OblogService {
   constructor(private http: HttpClient,
               httpErrorHandler: HttpErrorHandlerService) {
   }
+
   private handleError: HandleError;
 
   addBlog(hero: string): Observable<string> {
@@ -28,6 +29,9 @@ export class OblogService {
       );
   }
 
+  getBlogSort(userId: number): Observable<string> {
+
+  }
 
 
 }
