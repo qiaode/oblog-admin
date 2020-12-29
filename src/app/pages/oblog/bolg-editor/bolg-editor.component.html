@@ -37,7 +37,7 @@
         </div>
         <div nz-col nzSpan="20">
           <div *ngFor="let item of sorts; let i=index">
-            <nz-input-group [nzSuffix]="inputClearTpl" *ngIf="item.inputType">
+            <nz-input-group [nzSuffix]="inputClearTpl" *ngIf="item.isNew">
               <input type="text" nz-input [(ngModel)]="item.sortName" placeholder="input with clear icon" />
             </nz-input-group>
             <ng-template #inputClearTpl>

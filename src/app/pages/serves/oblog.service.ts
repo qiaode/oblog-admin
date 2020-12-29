@@ -29,9 +29,9 @@ export class OblogService {
       );
   }
 
-  getBlogSort(userId: number): Observable<string> {
+ /* getBlogSort(userId: number): Observable<string> {
 
-  }
+  }*/
 
 
 }

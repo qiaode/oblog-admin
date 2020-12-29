@@ -23,6 +23,8 @@ import {NzSelectModule} from 'ng-zorro-antd/select';
 import {NzDatePickerModule} from 'ng-zorro-antd/date-picker';
 import {NzCardModule} from 'ng-zorro-antd/card';
 import {NzCheckboxModule} from 'ng-zorro-antd/checkbox';
+import {FootModule} from '../foot/foot.module';
+import {HeaderModule} from '../header/header.module';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import {NzCheckboxModule} from 'ng-zorro-antd/checkbox';
     NzSelectModule,
     NzDatePickerModule,
     NzCardModule,
-    NzCheckboxModule
+    NzCheckboxModule,
+    FootModule,
+    HeaderModule
   ],
   exports: []
 })
